@@ -1,0 +1,104 @@
+.speedometer{
+    position: relative;
+    width: max-content;
+    z-index: 100;
+    border-radius: 100px 100px 0 0;
+    background: #fff;
+    padding: 2px;
+    top: -370px;
+    left: 200px;
+    box-shadow: 10px 5px 2px rgba(0, 0, 0, 0.19);
+    
+}
+.speedometer:hover::before{
+    content: attr(data-name);
+    padding: 2px 5px;
+    background: lavender;
+    position: absolute;
+    left: 105px;
+    top:-4px;
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 500;
+    /* display: none; */
+    
+}
+.speedometer:hover::after{
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    transform: rotate(270deg);
+    border-bottom: 5px solid #000;
+    top: 10%;
+    right: 16px;
+}
+
+.semi-circle{
+    width: 120px;
+    height: 60px;
+    border-radius: 100px 100px 0 0;
+    background: grey;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    z-index: -1;
+    border: 2px solid lavender;
+  
+
+}
+
+.semi-circle div{
+    border: 30px solid transparent;
+}
+.semi-circle div:nth-child(1){
+    border-top: 30px solid #1abc9c;
+    border-right: 30px solid #1abc9c;
+    background: #0c76bd;
+}
+.semi-circle div:nth-child(2){
+    border-bottom: 30px solid #c72918;
+    border-right: 30px solid #c72918;
+    background: #f1c40f;
+}
+.needle{
+    width: 35px;
+    height: 4px;
+    background: black;
+    position: absolute;
+    bottom: 4px;
+    left: 27px;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    transform-origin: 100% 2px;
+    transform: rotate(0deg);
+    transition:  2s all;
+    z-index: -1;
+}
+.point{
+    width: 12px;
+    height: 12px;
+    border-radius:50%;
+    position: absolute;
+    background: lavender;
+    border: 3px solid #000;
+    bottom: 0px;
+    margin-top: 50px !important;
+    left: 56px;
+    z-index: 1;
+    padding: 2px;
+    /* display: none; */
+    
+}
+.pin{
+    transform: rotate(0deg);
+}
+
